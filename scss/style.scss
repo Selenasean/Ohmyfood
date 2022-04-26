@@ -1,0 +1,89 @@
+@charset "UTF-8";
+    $localisation_bgcolor:#ededed;
+    $boxshadow_localisation:#545454;
+    $font_robotto:'roboto',sans serif;
+    $font_shrikhand:'shrikhand';
+    $gradient_purple:#9356DC;
+    $gradient_purple_light : #FF79DA;
+
+    body {
+    width:100%;
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    font-family: $font_robotto;
+    }
+    .header {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:100%;
+        height:80px;
+        &__return {
+            display:none;
+        }
+        &__img {
+            width:50%;
+            object-fit:scale-down;
+        }
+    }
+    .localisation {
+        height: 60px;
+        background-color:$localisation_bgcolor;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        box-shadow: inset 0 6px 6px -6px $boxshadow_localisation;
+        &__icone {
+            font-size:20px;
+            margin-left:20px;
+        }
+        &__input {
+            border:none;
+            background-color:$localisation_bgcolor;
+            margin-left:20px;
+
+            &::placeholder{
+                color:black;
+                opacity:1;
+                font-family: $font_robotto;
+                font-size :medium;
+                font-weight :500;
+            }
+            &:active {
+                border:none;
+            }
+        }
+    }
+    .explore-bloc {
+        background-color: #f7f7f5;
+        width:100%;
+        height:280px;
+        text-align: center;
+        &__title {
+            padding:15px 50px 0 55px;
+            font-weight:900;
+            font-size:x-large;
+        }
+        &__text {
+            padding:0 50px 10px 55px;
+            font-weight:300;
+        }
+    }
+    .btn-explore {
+        border-radius: 100px;
+        background : linear-gradient(180deg, $gradient_purple_light, $gradient_purple);
+        border:none;
+        box-shadow:5px 5px 15px grey;
+        width: 60%;
+        &__link {
+            text-decoration:none;
+        }
+        &__text {
+            color:white;
+            font-weight: 500;
+            font-size:medium;
+            font-family: $font_robotto;
+        }
+
+    }
