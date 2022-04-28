@@ -287,6 +287,10 @@ body {
   margin-bottom: 25px;
 }
 
+.card__img {
+  width: 100%;
+}
+
 .card__img__food {
   width: 100%;
   height: 180px;
@@ -295,7 +299,7 @@ body {
      object-fit: cover;
 }
 
-.card__palette__body {
+.card__body {
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,7 +316,7 @@ body {
           align-items: center;
 }
 
-.card__palette__text {
+.card__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,23 +327,23 @@ body {
   margin-left: 15px;
 }
 
-.card__palette__text__name {
+.card__text__name {
   margin: 10px 0 0 0;
   font-size: 17px;
   font-weight: 900;
 }
 
-.card__palette__text__place {
+.card__text__place {
   margin: 5px 0;
   font-size: 16px;
   font-weight: 300;
 }
 
-.card__palette__heart {
+.card__heart {
   margin: 0 20px 0 0;
 }
 
-.card__palette__heart__icone {
+.card__heart__icone {
   font-size: x-large;
 }
 
