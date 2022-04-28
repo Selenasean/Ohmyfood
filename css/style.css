@@ -124,6 +124,7 @@ body {
   -webkit-box-shadow: 10px 5px 15px #a4a2a2;
           box-shadow: 10px 5px 15px #a4a2a2;
   width: 55%;
+  height: 50px;
 }
 
 .btn-explore__text {
@@ -159,9 +160,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-left: 5px;
 }
 
 .running__nb-btn {
@@ -182,7 +181,7 @@ body {
   background-color: #9356DC;
   font-size: 10px;
   color: white;
-  font-weight: 100px;
+  font-weight: 100;
   width: 20px;
   height: 20px;
   border-radius: 200px;

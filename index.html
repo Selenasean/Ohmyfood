@@ -22,18 +22,18 @@
     <header class="header">
         <img class="header__img" src="images/ohmyfood.png" alt="logo OhMyFood" />
     </header>
-    <section class="localisation">
+    <div class="localisation">
         <div class="localisation__icone"><i class="fa-solid fa-location-dot"></i></div>
         <input class="localisation__input" type="search" placeholder="Paris, Belleville" />
-    </section>
+    </div>
     <article class="explore-bloc">
         <h1 class="explore-bloc__title">Réservez le menu qui vous convient</h1>
         <p class="explore-bloc__text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <button class="btn-explore">
-            <a href="#" class="btn-explore__link">
-                <p class="btn-explore__text">Explorer nos restaurants</p>
-            </a>
-        </button>
+        <form action="#link-explore">
+            <button onclick="href='#link-explore';" class="btn-explore">
+                <span class="btn-explore__text">Explorer nos restaurants</span>
+            </button>
+        </form>
     </article>
     <main>
         <div class="running">
@@ -44,12 +44,10 @@
                         <i class="fa-solid fa-1"></i>
                     </span>
                     <button class="running__btn running__btn__choice">
-                        <a href="#" class="running__btn__link">
-                            <span class="running__btn__icone">
-                                <i class="fa-solid fa-mobile-screen-button"></i>
-                            </span>
-                            <p class="running__btn__text">Choisissez un restaurant</p>
-                        </a>
+                        <span class="running__btn__icone">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </span>
+                        <span class="running__btn__text">Choisissez un restaurant</span>
                     </button>
                 </div>
                 <div class="running__nb-btn">
@@ -57,12 +55,10 @@
                         <i class="fa-solid fa-2"></i>
                     </span>
                     <button class="running__btn running__btn__compose">
-                        <a href="#" class="running__btn__link">
-                            <span class="running__btn__icone">
-                                <i class="fa-solid fa-list"></i>
-                            </span>
-                            <p class="running__btn__text">Composez votre menu</p>
-                        </a>
+                        <span class="running__btn__icone">
+                            <i class="fa-solid fa-list"></i>
+                        </span>
+                        <span class="running__btn__text">Composez votre menu</span>
                     </button>
                 </div>
                 <div class="running__nb-btn">
@@ -70,17 +66,15 @@
                         <i class="fa-solid fa-3"></i>
                     </span>
                     <button class="running__btn running__btn__taste">
-                        <a href="#" class="running__btn__link">
-                            <span class="running__btn__icone">
-                                <i class="fa-solid fa-store"></i>
-                            </span>
-                            <p class="running__btn__text">Dégustez au restaurant</p>
-                        </a>
+                        <span class="running__btn__icone">
+                            <i class="fa-solid fa-store"></i>
+                        </span>
+                        <span class="running__btn__text">Dégustez au restaurant</span>
                     </button>
                 </div>
             </div>
         </div>
-        <section class="restaurant">
+        <section class="restaurant" id="link-explore">
             <h1 class="restaurant__title">Restaurants</h1>
             <div class="restaurant__cards">
                 <div class="card card__palette">
@@ -150,6 +144,7 @@
                         </div>
                     </a>
                 </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
