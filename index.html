@@ -13,14 +13,13 @@
     <script src="https://kit.fontawesome.com/380bc53bd5.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
-        <div class="header__return"><i class="fa-solid fa-arrow-left "></i></div>
         <img class="header__img" src="images/ohmyfood.png" alt="logo OhMyFood" />
     </header>
     <section class="localisation">
@@ -37,8 +36,147 @@
         </button>
     </article>
     <main>
-        <div class="
-        " </main>
+        <div class="running">
+            <h1 class="running__title">Fonctionnement</h1>
+            <div class="running__buttons">
+                <div class="running__nb-btn">
+                    <span class="running__nb-btn__number">
+                        <i class="fa-solid fa-1"></i>
+                    </span>
+                    <button class="running__btn running__btn__choice">
+                        <a href="#" class="running__btn__link">
+                            <span class="running__btn__icone">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </span>
+                            <p class="running__btn__text">Choisissez un restaurant</p>
+                        </a>
+                    </button>
+                </div>
+                <div class="running__nb-btn">
+                    <span class="running__nb-btn__number">
+                        <i class="fa-solid fa-2"></i>
+                    </span>
+                    <button class="running__btn running__btn__compose">
+                        <a href="#" class="running__btn__link">
+                            <span class="running__btn__icone">
+                                <i class="fa-solid fa-list"></i>
+                            </span>
+                            <p class="running__btn__text">Composez votre menu</p>
+                        </a>
+                    </button>
+                </div>
+                <div class="running__nb-btn">
+                    <span class="running__nb-btn__number">
+                        <i class="fa-solid fa-3"></i>
+                    </span>
+                    <button class="running__btn running__btn__taste">
+                        <a href="#" class="running__btn__link">
+                            <span class="running__btn__icone">
+                                <i class="fa-solid fa-store"></i>
+                            </span>
+                            <p class="running__btn__text">Dégustez au restaurant</p>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <section class="restaurant">
+            <h1 class="restaurant__title">Restaurants</h1>
+            <div class="restaurant__cards">
+                <div class="card card__palette">
+                    <a href="#">
+                        <div class="card__img">
+                            <img src="images/La_palette_du_gout.jpg" alt="photo_la_palette_du_gout"
+                                class="card__img__food" />
+                        </div>
+                        <div class="card__palette__body">
+                            <div class="card__palette__text">
+                                <h2 class="card__palette__text__name">La palette du goût</h2>
+                                <p class="card__palette__text__place">Ménilmontant</p>
+                            </div>
+                            <div class="card__palette__heart">
+                                <span class="card__palette__heart__icone"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card card__palette">
+                    <a href="#">
+                        <div class="card__img">
+                            <img src="images/La_note_enchantee.jpg" alt="photo_la_note_enchantée"
+                                class="card__img__food" />
+                        </div>
+                        <div class="card__palette__body">
+                            <div class="card__palette__text">
+                                <h2 class="card__palette__text__name">La note enchantée</h2>
+                                <p class="card__palette__text__place">Charonne</p>
+                            </div>
+                            <div class="card__palette__heart">
+                                <span class="card__palette__heart__icone"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card card__palette">
+                    <a href="#">
+                        <div class="card__img">
+                            <img src="images/A_la_francaise.jpg" alt="photo_à_la_française" class="card__img__food" />
+                        </div>
+                        <div class="card__palette__body">
+                            <div class="card__palette__text">
+                                <h2 class="card__palette__text__name">A la française</h2>
+                                <p class="card__palette__text__place">Cité rouge</p>
+                            </div>
+                            <div class="card__palette__heart">
+                                <span class="card__palette__heart__icone"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card card__palette">
+                    <a href="#">
+                        <div class="card__img">
+                            <img src="images/Le_delice_des_sens.jpg" alt="photo_le_délice_des_sens"
+                                class="card__img__food" />
+                        </div>
+                        <div class="card__palette__body">
+                            <div class="card__palette__text">
+                                <h2 class="card__palette__text__name">Le délice des sens</h2>
+                                <p class="card__palette__text__place">Folie-Mericourt</p>
+                            </div>
+                            <div class="card__palette__heart">
+                                <span class="card__palette__heart__icone"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__bloc">
+            <h1 class="footer__title">ohmyfood</h1>
+            <ul class="footer__list">
+                <li class="footer__list__items">
+                    <a class="footer__list__items__link" href="#">
+                        <i class="fa-solid fa-utensils footer__list__fork"></i>
+                        Proposer un restaurant
+                    </a>
+                </li>
+                <li class="footer__list__items">
+                    <a class="footer__list__items__link" href="#">
+                        <i class="fa-solid fa-handshake-angle footer__list__hand"></i>
+                        Devenir partenaire
+                    </a>
+                </li>
+                <li class="footer__list__items">
+                    <a class="footer__list__items__link" href="#">Mentions légales</a>
+                </li>
+                <li class="footer__list__items">
+                    <a class="footer__list__items__link" href="mailto:ohmyfood@contact.com">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>
