@@ -1,0 +1,26 @@
+@keyframes rotations{
+    0%{
+      transform: rotate(-180deg);
+      color: linear-gradient($color_primary,$color_tertiary);
+  
+      } 
+      60%{
+          transform:rotate3d(50deg);
+          color:$color_tertiary;
+      }
+      100% {
+      transform: rotate(180deg);
+      color:linear-gradient($color_tertiary,$color_primary);
+  
+      }
+}
+@keyframes disparition {
+      from{
+          opacity:1;
+          z-index:3;
+      }
+      to {
+          opacity:0;
+          z-index:-1;
+      }
+}

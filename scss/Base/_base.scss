@@ -4,3 +4,10 @@
 a {
     text-decoration:none;
 }
+/*couleur degradé svg coeur page d'accueil*/
+.stop1{
+    stop-color:$color_primary;
+}
+.stop2{
+    stop-color:$color_secondary;
+}

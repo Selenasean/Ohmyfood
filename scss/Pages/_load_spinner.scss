@@ -1,0 +1,24 @@
+
+.container{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:3;
+    opacity:0.8;
+    background-color:$color_text;
+    animation: disparition 3s ease-in-out both;
+}
+.element{
+    &__fork{
+        width:100%;
+        height:100%;
+        position:relative;
+        font-size: 60px;
+        animation: rotations 1s ease-in-out infinite both;
+        color:$color_primary;
+    }
+}

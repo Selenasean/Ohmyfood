@@ -1,3 +1,4 @@
+
 .localisation {
     height: 60px;
     background-color: $localisation_bgcolor;
@@ -53,6 +54,10 @@
     border: none;
     box-shadow: 10px 5px 15px $color_shadow_darker;
     padding:15px 40px;
+    &:hover{
+        background: linear-gradient(180deg, lighten($color_secondary,3%), lighten($color_primary,5%));
+        box-shadow: 10px 5px 15px darken($color_shadow_darker,10%);
+    }
     &__text {
         color: $color_text_btn;
         font-weight: 500;
@@ -100,7 +105,7 @@
             margin-top: 20px;
             position: relative;
             left: 15px;
-            z-index: 2;
+            z-index: 1;
         }
     }
 
@@ -115,18 +120,17 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-
-        &__link {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+        &:hover  {
+            background-color: lighten($color_primary,35%); 
+            box-shadow: 6px 4px 10px darken($color_shadow_light,10%);
+            .running__btn__icone i {
+                color:$color_primary;
+            }
         }
-
         &__icone {
             color: $color_btn_running;
             margin: 0 25px 0 40px;
         }
-
         &__text {
             font-weight: 500;
             color: $color_text;
@@ -202,7 +206,7 @@
         display: flex;
         flex-direction: column;
         margin-left: 15px;
-
+        color:$color_text;
         &__name {
             margin: 10px 0 0 0;
             font-size: 17px;
@@ -218,10 +222,58 @@
 
     &__heart {
         margin: 0 20px 0 0;
-
-        &__icone {
-            font-size: x-large;
-        }
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:30px;
+        &__imgup, .card__heart__imgdown{
+            width:30px;
+            height: 25px;
+            }
+            &__imgup{
+                stroke: black;
+                stroke-width: 10px;
+                position:relative;
+                z-index:1;
+                fill:white;
+                opacity:1;
+                &:hover{
+                    opacity:0;
+                    animation: remplissage 0.5s linear both;
+                    transform-origin: 50% 0%;
+                    .card__heart__imgdown{
+                        stroke: black;
+                        stroke-width: 20px;
+                    }
+                }
+            }
+            &__imgdown{
+                position:absolute;
+                fill:url(#Gradient1);
+            }
     }
+}
 
+@keyframes remplissage{
+    0%{
+        opacity:1;
+    }
+    12%{
+        opacity:0.87;
+    }
+    30%{
+        opacity: 0.75;
+    }
+    50%{
+        opacity:0.57;
+    }
+    75%{
+        opacity:0.38;
+    }
+    90%{
+        opacity:0.1;
+    }
+    100%{
+        opacity:0;
+    }
 }

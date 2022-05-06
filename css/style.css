@@ -1,9 +1,76 @@
+@charset "UTF-8";
+@-webkit-keyframes rotations {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    color: linear-gradient(#9356DC, #99E2D0);
+  }
+  60% {
+    -webkit-transform: rotate3d(50deg);
+            transform: rotate3d(50deg);
+    color: #99E2D0;
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    color: linear-gradient(#99E2D0, #9356DC);
+  }
+}
+@keyframes rotations {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    color: linear-gradient(#9356DC, #99E2D0);
+  }
+  60% {
+    -webkit-transform: rotate3d(50deg);
+            transform: rotate3d(50deg);
+    color: #99E2D0;
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    color: linear-gradient(#99E2D0, #9356DC);
+  }
+}
+
+@-webkit-keyframes disparition {
+  from {
+    opacity: 1;
+    z-index: 3;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes disparition {
+  from {
+    opacity: 1;
+    z-index: 3;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
 * {
   font-family: "Roboto", sans serif;
 }
 
 a {
   text-decoration: none;
+}
+
+/*couleur degradé svg coeur page d'accueil*/
+.stop1 {
+  stop-color: #9356DC;
+}
+
+.stop2 {
+  stop-color: #FF79DA;
 }
 
 main {
@@ -21,7 +88,7 @@ main {
 
 body {
   width: 100%;
-  margin: 0;
+  max-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,7 +161,7 @@ body {
 .footer__list {
   list-style-type: none;
   padding: 0;
-  color: white;
+  color: #ffffff;
   font-weight: 300;
 }
 
@@ -112,7 +179,38 @@ body {
 }
 
 .footer__list__items__link {
-  color: white;
+  color: #ffffff;
+}
+
+.container {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+  opacity: 0.8;
+  background-color: black;
+  -webkit-animation: disparition 3s ease-in-out both;
+          animation: disparition 3s ease-in-out both;
+}
+
+.element__fork {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 60px;
+  -webkit-animation: rotations 1s ease-in-out infinite both;
+          animation: rotations 1s ease-in-out infinite both;
+  color: #9356DC;
 }
 
 .localisation {
@@ -205,8 +303,15 @@ body {
   padding: 15px 40px;
 }
 
+.btn-explore:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff88de), to(#a16be0));
+  background: linear-gradient(180deg, #ff88de, #a16be0);
+  -webkit-box-shadow: 10px 5px 15px #8b8888;
+          box-shadow: 10px 5px 15px #8b8888;
+}
+
 .btn-explore__text {
-  color: white;
+  color: #ffffff;
   font-weight: 500;
   font-size: 16px;
 }
@@ -259,7 +364,7 @@ body {
 .running__nb-btn__number {
   background-color: #9356DC;
   font-size: 10px;
-  color: white;
+  color: #ffffff;
   font-weight: 100;
   width: 20px;
   height: 20px;
@@ -276,7 +381,7 @@ body {
   margin-top: 20px;
   position: relative;
   left: 15px;
-  z-index: 2;
+  z-index: 1;
 }
 
 .running__btn {
@@ -300,17 +405,14 @@ body {
           align-items: center;
 }
 
-.running__btn__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.running__btn:hover {
+  background-color: #f2eafb;
+  -webkit-box-shadow: 6px 4px 10px #bfbdbd;
+          box-shadow: 6px 4px 10px #bfbdbd;
+}
+
+.running__btn:hover .running__btn__icone i {
+  color: #9356DC;
 }
 
 .running__btn__icone {
@@ -350,7 +452,7 @@ body {
 }
 
 .card {
-  background-color: white;
+  background-color: #ffffff;
   width: 90%;
   height: 250px;
   display: -webkit-box;
@@ -424,6 +526,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 15px;
+  color: black;
 }
 
 .card__text__name {
@@ -440,10 +543,97 @@ body {
 
 .card__heart {
   margin: 0 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
 }
 
-.card__heart__icone {
-  font-size: x-large;
+.card__heart__imgup, .card__heart .card__heart__imgdown {
+  width: 30px;
+  height: 25px;
+}
+
+.card__heart__imgup {
+  stroke: black;
+  stroke-width: 10px;
+  position: relative;
+  z-index: 1;
+  fill: white;
+  opacity: 1;
+}
+
+.card__heart__imgup:hover {
+  opacity: 0;
+  -webkit-animation: remplissage 0.5s linear both;
+          animation: remplissage 0.5s linear both;
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+}
+
+.card__heart__imgup:hover .card__heart__imgdown {
+  stroke: black;
+  stroke-width: 20px;
+}
+
+.card__heart__imgdown {
+  position: absolute;
+  fill: url(#Gradient1);
+}
+
+@-webkit-keyframes remplissage {
+  0% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0.87;
+  }
+  30% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.57;
+  }
+  75% {
+    opacity: 0.38;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes remplissage {
+  0% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0.87;
+  }
+  30% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.57;
+  }
+  75% {
+    opacity: 0.38;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .bg-img {
@@ -538,7 +728,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: white;
+  background-color: #ffffff;
   margin-bottom: 20px;
   width: 95%;
   height: 100%;
@@ -596,7 +786,7 @@ body {
   border: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(180deg, #FF79DA, #9356DC);
-  color: white;
+  color: #ffffff;
   width: 55%;
   height: 60px;
   border-radius: 100px;
