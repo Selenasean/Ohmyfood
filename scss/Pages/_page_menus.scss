@@ -1,0 +1,245 @@
+.bg-img {
+    width: 100%;
+    max-height: 400px;
+
+    &__capture {
+        object-fit: cover;
+        width: 100%;
+        height: 400px;
+    }
+}
+
+.menu-bloc {
+    background-color: $color_bg;
+    width: 100%;
+    max-height: 2500px;
+    height: auto;
+    padding-bottom: 40px;
+    top: 350px;
+    border-radius: 45px 45px 0 0;
+
+    &__title {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin-bottom: 25px;
+    }
+
+    &__name {
+        margin: 38px 0 0 20px;
+        font-family: $font_shrikhand;
+        font-weight: 300;
+        font-size: 28px;
+    }
+
+    &__heartup,
+    .menu-bloc__heartdown {
+        width: 30px;
+        height: 25px;
+        margin-right: 25px;
+    }
+
+    &__heartup {
+        stroke: black;
+        stroke-width: 10px;
+        z-index: 1;
+        fill: $color_bg;
+        opacity: 1;
+        z-index: 8;
+        position: relative;
+
+        &:hover {
+            opacity: 0;
+            animation: remplissage 0.2s linear both;
+            cursor: pointer;
+        }
+    }
+
+    &__heartdown {
+        position: absolute;
+        top: 37px;
+        right: 0;
+        fill: url(#Gradient1);
+        z-index: 1;
+    }
+
+    &__meal {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        @include tablette {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+}
+
+.meal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &__title {
+        font-weight: 300;
+        font-size: 18px;
+        border-bottom: 4px solid $color_tertiary;
+        width: 45px;
+        padding-bottom: 8px;
+        margin-left: 20px;
+        align-self: flex-start;
+        opacity: 0;
+        animation: title-meal .2s ease .2s both;
+        transform-origin: left;
+        transform: scaleX(0);
+
+    }
+
+    &__choice {
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $color_text_btn;
+        margin-bottom: 20px;
+        width: 340px;
+        height: 75px;
+        border-radius: 18px;
+        box-shadow: 4px 5px 20px $color_shadow_light;
+        opacity: 0;
+        animation: choice-move-up .3s ease-in both;
+        transform: translateY(0%);
+        position: relative;
+        overflow: hidden;
+
+        @for $i from 1 through $num_choice {
+            &--#{$i} {
+                animation-delay: .3s * $i;
+            }
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            padding: 12px 10px;
+        }
+
+        &__name {
+            font-weight: 600;
+            font-size: 18px;
+            padding-bottom: 8px;
+            text-align: start;
+            @include overflow-text;
+        }
+
+        &__plus {
+            font-weight: 300;
+            font-size: 15px;
+            text-align: start;
+            @include overflow-text;
+        }
+
+        &__price {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 30px 10px 0 0;
+            transform: translateX(0);
+            transform-origin: right;
+        }
+
+        &::before {
+            content: "\f058";
+            font-family: 'fontawesome';
+            font-size: 20px;
+            color: $color_text_btn;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            transform: translateX(100%);
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background-color: $color_tertiary;
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+
+
+        &:hover {
+            cursor: pointer;
+
+            &::before {
+                animation: coche-rotate .3s both;
+            }
+
+            &::after {
+                animation: band-green-hover .1s ease-in-out both;
+            }
+
+            .meal__choice__price {
+                transform: translateX(-200%);
+                transition-duration: .1s;
+
+            }
+
+            .meal__choice__plus {
+                width: 200px;
+            }
+
+            .meal__choice__name {
+                width: 250px;
+            }
+
+            .meal__coche {
+                display: block;
+                transform-origin: right;
+                transform: translateX(0);
+                animation: run-round .1s linear both;
+
+            }
+        }
+
+    }
+}
+
+.btn-menu {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 20px;
+    width: 100%;
+    margin: 20px 0 10px 0;
+
+    &__cmd {
+        border: none;
+        background: linear-gradient(180deg, $color_secondary, $color_primary);
+        color: $color_text_btn;
+        width: 55%;
+        height: 60px;
+        border-radius: 100px;
+        box-shadow: 4px 5px 20px $color_shadow_light;
+
+        &:hover {
+            @include btn-degrade-hover;
+        }
+    }
+}
