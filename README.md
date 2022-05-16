@@ -9,7 +9,7 @@
     utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les
     restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte !
 
-    Le site "maquette" se compose d'une page d'accueil renvoyant sur 4 pages menus de 4 restaurants différents.
+    Le site se compose d'une page d'accueil renvoyant sur 4 pages menus de 4 restaurants différents.
 
 #### Technologies utilisées et contraintes :
 
