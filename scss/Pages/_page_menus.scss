@@ -236,7 +236,7 @@
         width: 55%;
         height: 60px;
         border-radius: 100px;
-        box-shadow: 4px 5px 20px $color_shadow_light;
+        box-shadow: 4px 5px 20px $color_shadow_darker;
 
         &:hover {
             @include btn-degrade-hover;

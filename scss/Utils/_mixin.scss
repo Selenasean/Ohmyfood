@@ -11,8 +11,8 @@
 }
 
 @mixin btn-degrade-hover {
-    background: linear-gradient(180deg, lighten($color_secondary, 3%), lighten($color_primary, 5%));
-    box-shadow: 10px 5px 15px darken($color_shadow_darker, 10%);
+    background: linear-gradient(180deg, lighten($color_secondary, 6%), lighten($color_primary, 8%));
+    box-shadow: 10px 5px 15px darken($color_shadow_darker, 50%);
     cursor: pointer;
 }
 
