@@ -471,8 +471,8 @@ body {
 .btn-explore:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff98e2), to(#a978e3));
   background: linear-gradient(180deg, #ff98e2, #a978e3);
-  -webkit-box-shadow: 10px 5px 15px #242323;
-          box-shadow: 10px 5px 15px #242323;
+  -webkit-box-shadow: 10px 5px 15px #3e3c3c;
+          box-shadow: 10px 5px 15px #3e3c3c;
   cursor: pointer;
 }
 
@@ -1212,8 +1212,8 @@ body {
 .btn-menu__cmd:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff98e2), to(#a978e3));
   background: linear-gradient(180deg, #ff98e2, #a978e3);
-  -webkit-box-shadow: 10px 5px 15px #242323;
-          box-shadow: 10px 5px 15px #242323;
+  -webkit-box-shadow: 10px 5px 15px #3e3c3c;
+          box-shadow: 10px 5px 15px #3e3c3c;
   cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
