@@ -1,5 +1,5 @@
 
-# Projet3_Ohmyfood_042022 
+# Projet 3- Ohmyfood - 042022 
 ## OPENCLASSROOM
 ### - Dynamiser une page web avec des animations CSS -     
 #### La marque et son identité :
